@@ -1,0 +1,317 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Button from "../components/ui/Button";
+import channels4_banner from "../assets/channels4_banner.jpg";
+import mansao_banner from "../assets/mansao.jpg";
+import fern_banner from "../assets/fern.jpg";
+---
+
+<Layout title="Mensagens - CEABEM">
+  <Navbar />
+
+  <main>
+    <!-- Seção Hero com título da página -->
+    <section class="py-16 bg-church-green/10">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-church-black mb-6">
+            CEABEM indica
+          </h1>
+          <p class="text-xl text-church-black/80 max-w-3xl mx-auto">
+            Canais e séries de estudos espíritas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Últimas Mensagens -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-church-black mb-12 text-center">
+          Clique e confira os canais e séries de estudos espíritas.
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Mensagem 1 -->
+          <div
+            class="bg-church-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden border border-church-green/10"
+          >
+            <div class="aspect-video bg-church-gray/20">
+              <!-- Placeholder para thumbnail do vídeo/imagem -->
+              <div class="w-full h-full flex items-center justify-center">
+                <img src={channels4_banner.src} alt="" />
+              </div>
+            </div>
+            <div class="p-6">
+              <span class="text-sm font-medium text-church-green">FEBTv</span>
+              <h3 class="text-xl font-bold text-church-black mt-2">
+                Canal Oficial da FEB
+              </h3>
+              <p class="text-church-gray mt-1">
+                Assista o canal da Federação Espírita Brasileira no YouTube.
+              </p>
+              <p class="text-church-black mt-4">
+                Ajudando a divulgar a Doutrina Espírita.
+              </p>
+              <div class="mt-6">
+                <Button client:load variant="primary" size="sm">
+                  <a href="https://www.youtube.com/@FEBtvBrasil" target="_blank"
+                    >Assistir</a
+                  >
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mensagem 2 -->
+          <div
+            class="bg-church-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden border border-church-green/10"
+          >
+            <div class="aspect-video bg-church-gray/20">
+              <!-- Placeholder para thumbnail do vídeo/imagem -->
+              <div class="w-full h-full flex items-center justify-center">
+                <img src={mansao_banner.src} alt="" />
+              </div>
+            </div>
+            <div class="p-6">
+              <span class="text-sm font-medium text-church-green"
+                >Mansão do Caminho</span
+              >
+              <h3 class="text-xl font-bold text-church-black mt-2">
+                A Mansão do Caminho
+              </h3>
+              <p class="text-church-gray mt-1">
+                Canal da Mansão do Caminho no YouTube.
+              </p>
+              <p class="text-church-black mt-4">
+                Canal oficial do médium e orador espírita Divaldo Franco e das
+                Obras Sociais Mansão do Caminho. A Mansão do Caminho é a obra
+                social do Centro Espírita Caminho da Redenção, situada em
+                Salvador, Bahia, tendo sido fundada em 15 de agosto de 1952.
+              </p>
+              <div class="mt-6">
+                <Button client:load variant="primary" size="sm">
+                  <a
+                    href="https://www.youtube.com/@mansaodocaminho"
+                    target="_blank">Assistir</a
+                  >
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mensagem 3 -->
+          <div
+            class="bg-church-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden border border-church-green/10"
+          >
+            <div class="aspect-video bg-church-gray/20">
+              <!-- Placeholder para thumbnail do vídeo/imagem -->
+              <div class="w-full h-full flex items-center justify-center">
+                <img src={fern_banner.src} alt="" />
+              </div>
+            </div>
+            <div class="p-6">
+              <span class="text-sm font-medium text-church-green">FERNTv</span>
+              <h3 class="text-xl font-bold text-church-black mt-2">
+                Canal Oficial da Federação Espitita do RN
+              </h3>
+              <p class="text-church-gray mt-1">
+                Assista o canal da Federação Espírita do RN no YouTube.
+              </p>
+              <p class="text-church-black mt-4">
+                A FERNtv tem como objetivo incentivar, apoiar e divulgar o
+                espiritismo através de transmissões ao vivo, arte, quadros
+                educativos e de estudo.
+              </p>
+              <div class="mt-6">
+                <Button client:load variant="primary" size="sm">
+                  <a
+                    href="https://www.youtube.com/@FERNTVespirita"
+                    target="_blank">Assistir</a
+                  >
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Séries e Estudos Temáticos -->
+    <section class="py-16 bg-church-gray/10">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-church-black mb-12 text-center">
+          Séries e Estudos Temáticos
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Série 1 -->
+          <div
+            class="bg-church-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden"
+          >
+            <div class="h-40 bg-church-green flex items-center justify-center">
+              <h3 class="text-2xl font-bold text-church-white px-4 text-center">
+                Frutos do Espírito
+              </h3>
+            </div>
+            <div class="p-6">
+              <p class="text-church-black">
+                Uma série de estudos sobre os nove frutos do Espírito Santo e
+                como cultivá-los em nossa vida diária.
+              </p>
+              <p class="text-church-gray mt-4">
+                7 mensagens • Por Pr. Ricardo Silva
+              </p>
+              <div class="mt-6">
+                <Button client:load variant="outline" size="sm"
+                  >Ver Série</Button
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Série 2 -->
+          <div
+            class="bg-church-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden"
+          >
+            <div
+              class="h-40 bg-church-green/80 flex items-center justify-center"
+            >
+              <h3 class="text-2xl font-bold text-church-white px-4 text-center">
+                Vida em Família
+              </h3>
+            </div>
+            <div class="p-6">
+              <p class="text-church-black">
+                Princípios bíblicos para construir famílias saudáveis e
+                relacionamentos abençoados.
+              </p>
+              <p class="text-church-gray mt-4">
+                5 mensagens • Por Pr. André Santos
+              </p>
+              <div class="mt-6">
+                <Button client:load variant="outline" size="sm"
+                  >Ver Série</Button
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Série 3 -->
+          <div
+            class="bg-church-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden"
+          >
+            <div
+              class="h-40 bg-church-green/60 flex items-center justify-center"
+            >
+              <h3 class="text-2xl font-bold text-church-white px-4 text-center">
+                Livro de Apocalipse
+              </h3>
+            </div>
+            <div class="p-6">
+              <p class="text-church-black">
+                Um estudo detalhado sobre o último livro da Bíblia e suas
+                profecias para os tempos finais.
+              </p>
+              <p class="text-church-gray mt-4">
+                12 mensagens • Por Pr. Lucas Oliveira
+              </p>
+              <div class="mt-6">
+                <Button client:load variant="outline" size="sm"
+                  >Ver Série</Button
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categorias -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-church-black mb-12 text-center">
+          Explore por Categorias
+        </h2>
+
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto"
+        >
+          <a
+            href="#"
+            class="bg-church-green/10 hover:bg-church-green/20 transition-colors rounded-lg p-4 text-center"
+          >
+            <span class="block text-church-black font-medium">Família</span>
+          </a>
+          <a
+            href="#"
+            class="bg-church-green/10 hover:bg-church-green/20 transition-colors rounded-lg p-4 text-center"
+          >
+            <span class="block text-church-black font-medium">Evangelismo</span>
+          </a>
+          <a
+            href="#"
+            class="bg-church-green/10 hover:bg-church-green/20 transition-colors rounded-lg p-4 text-center"
+          >
+            <span class="block text-church-black font-medium">Oração</span>
+          </a>
+          <a
+            href="#"
+            class="bg-church-green/10 hover:bg-church-green/20 transition-colors rounded-lg p-4 text-center"
+          >
+            <span class="block text-church-black font-medium">Juventude</span>
+          </a>
+          <a
+            href="#"
+            class="bg-church-green/10 hover:bg-church-green/20 transition-colors rounded-lg p-4 text-center"
+          >
+            <span class="block text-church-black font-medium">Vida Cristã</span>
+          </a>
+          <a
+            href="#"
+            class="bg-church-green/10 hover:bg-church-green/20 transition-colors rounded-lg p-4 text-center"
+          >
+            <span class="block text-church-black font-medium"
+              >Estudos Bíblicos</span
+            >
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Devocional -->
+    <section class="py-16 bg-church-green/10">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold text-church-black mb-6 text-center">
+            Devocional Diário
+          </h2>
+          <p class="text-church-black/80 text-center mb-8">
+            Receba reflexões bíblicas diárias para fortalecer sua caminhada com
+            Deus
+          </p>
+
+          <div class="bg-church-white p-8 rounded-xl shadow-sm">
+            <form class="flex flex-col md:flex-row gap-4">
+              <input
+                type="email"
+                placeholder="Seu e-mail"
+                class="flex-grow px-4 py-3 rounded-lg border border-church-gray/30 focus:outline-none focus:border-church-green"
+              />
+              <Button client:load variant="primary">Inscrever-se</Button>
+            </form>
+
+            <p class="text-sm text-church-gray mt-4 text-center">
+              Ao se inscrever, você receberá um e-mail diário com uma reflexão
+              bíblica e versículos para meditação.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

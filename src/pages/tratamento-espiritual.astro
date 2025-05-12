@@ -1,0 +1,258 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Button from "../components/ui/Button";
+
+const duvidasFrequentes = [
+  {
+    pergunta: "Quantas solicitações de tratamento espiritual posso fazer?",
+    resposta: "Até 10 solicitações de tratamento espiritual por usuários.",
+  },
+  {
+    pergunta:
+      "Moro em um local que tem o fuso horário diferente de Natal-RN. Qual horário devo seguir?",
+    resposta:
+      "O fuso horário a seguir é o de Natal no Estado do Rio Grande do Norte que está a -3 horas em relação ao Meridiano de Greenwich. Nos dias marcados, o paciente se prepara como orientado e durante o horário marcado será atendido pela equipe espiritual que se encontrará preparada para isto.",
+  },
+  {
+    pergunta:
+      "No dia da visita, o paciente estará em um endereço diferente do informado na solicitação, o que fazer?",
+    resposta:
+      "No dia da visita, o paciente pode estar em qualquer endereço, basta que o paciente entre em prece e siga os procedimentos orientados.",
+  },
+  {
+    pergunta: "O paciente precisa estar acordado no horário marcado?",
+    resposta:
+      "O paciente pode ou não estar acordado, mas precisa estar harmonizado e preparado para a visita.",
+  },
+  {
+    pergunta:
+      "Tenho um familiar ou amigo necessitado de ajuda, mas ele não aceita seguir o tratamento, como posso ajudar?",
+    resposta:
+      "Para que o tratamento aconteça, é necessário que a pessoa a quem se destina esteja ciente para seguir as orientações. Se isto não for possível, então escolha a opção de atendimento de assistência espiritual e preencha os dados de seu amigo/familiar.",
+  },
+  {
+    pergunta: " O paciente que perdeu a data marcada como deve proceder?",
+    resposta:
+      "Caso o paciente por algum motivo, não possa se preparar em algum dos dias marcados, acrescente, ao final das datas marcadas, mais uma semana para as visitas. Os pacientes que tiverem indicação de agua fluidificada, o tratamento acontecerá durante todo o tempo descrito, sempre no mesmo dia da semana e da mesma forma.",
+  },
+  {
+    pergunta:
+      "O paciente já concluiu o tratamento e ainda se sente necessitado, é necessário solicitar nova visita?",
+    resposta:
+      "Não é necessário solicitar nova visita, durante o tempo em que o paciente estiver se utilizando da água fluidificada. Quando for o caso, o paciente estará sendo assistido, sempre no mesmo dia da semana. Após este período, no dia da semana em que o tratamento foi realizado, o paciente deve permanecer com os procedimentos antes orientados e pedir a equipe espiritual que permaneça lhe auxiliando pelo tempo que julgar necessário.",
+  },
+];
+---
+
+<Layout title="Tratamento Espiritual - CEABEM">
+  <Navbar />
+
+  <main>
+    <!-- Seção Hero com título da página -->
+    <section class="py-16 bg-church-green/10">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-church-black mb-6">
+            Tratamento Espiritual à Distância
+          </h1>
+          <p class="text-xl text-church-black/80 max-w-3xl mx-auto">
+            Auxiliando no equilíbrio físico, mental e espiritual por meio da fé
+            e da oração.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introdução -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-church-black mb-6">
+            O poder da fé na saúde integral
+          </h2>
+          <p class="text-lg text-church-black/80 text-left">
+            O Tratamento Espiritual à Distância é gratuito e para ser atendido
+            você precisa apenas solicitar informações através do nosso site.
+            Para isto, crie uma conta (se já não o fez) e clique aqui para
+            solicitar o atendimento e nós disponibilizamos no nosso site as
+            orientações a serem seguidas, enquanto a espiritualidade faz a sua
+            parte, conforme a vontade de Deus, suas necessidades e merecimento.
+            Para sua facilidade, as orientações do tratamento espiritual serão
+            enviadas para o seu e-mail. Mas como algumas pessoas não recebem
+            este e-mail por problemas diversos, as orientações também podem ser
+            visualizadas no site através de sua senha de acesso. Lembramos que
+            os procedimentos relacionados com o Tratamento Espiritual à
+            Distância não têm nenhuma relação com a Medicina. <br /> Se faz indispensável
+            a continuidade com o médico material, a equipe Espiritual continua auxiliando
+            as curas Médicas ou quaisquer práticas da Medicina convencional. <br
+            /> Os procedimentos relacionados com o Tratamento Espiritual à Distância
+            se referem exclusivamente à cura espiritual com o intuito do bem-estar
+            energético e espiritual determinam as condições de harmonização do paciente.
+            <br /> Não recomendamos a interrupção de nenhum tipo de tratamento médico.
+            O paciente pode solicitar o tratamento espiritual à distância em qualquer
+            hora e local que estiver. Para solicitar o tratamento é simples: realizar
+            no site um cadastro e, depois, solicitar o tratamento espiritual. Caso
+            o paciente deseje realizar o pedido para outra pessoa (que não esteja
+            em condições de ser orientado e informado quanto ao tratamento), pode
+            solicitar a assistência espiritual. Lembrando que cada usuário cadastrado
+            pode solicitar apenas dez tratamentos. Caso deseje mais tratamentos,
+            será necessária a abertura de um novo cadastro. Após a solicitação, a
+            equipe responsável pelo tratamento envia as orientações a serem seguidas.
+            Todas as informações ficam disponíveis na área do usuário. O tratamento
+            ocorre nas quartas e sábados. A equipe do Centro, coordenada pelo irmão
+            espiritual e orientador da casa, Bezerra de Menezes, está pronta para
+            atender a todos. São espíritos amigos e médiuns que auxiliam a todos
+            que solicitam o tratamento neste momento.
+          </p>
+        </div>
+
+        <div class="bg-church-green/5 p-8 rounded-xl shadow-sm mb-12">
+          <div class="flex flex-col md:flex-row items-center gap-6">
+            <div class="md:w-1/4 flex justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-24 h-24 text-church-green"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z"
+                ></path>
+              </svg>
+            </div>
+            <div class="md:w-3/4">
+              <h3 class="text-xl font-bold text-church-black mb-3">
+                Importante
+              </h3>
+              <p class="text-church-black/80">
+                O tratamento espiritual não substitui o tratamento médico
+                convencional. Incentivamos sempre a busca por profissionais de
+                saúde qualificados para questões físicas e mentais, enquanto
+                oferecemos o complemento espiritual para o processo de cura e
+                bem-estar.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dúvidas Frequentes -->
+    <section class="py-16 bg-church-gray/5">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold text-church-black mb-8 text-center">
+            Dúvidas Frequentes
+          </h2>
+
+          <div class="space-y-4">
+            {
+              duvidasFrequentes.map((duvida, index) => (
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                  <button
+                    class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-church-gray/5 transition-colors"
+                    onclick={`document.getElementById('resposta-${index}').classList.toggle('hidden')`}
+                  >
+                    <span class="font-medium text-church-black">
+                      {duvida.pergunta}
+                    </span>
+                    <svg
+                      class="w-5 h-5 text-church-green transform transition-transform"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    id={`resposta-${index}`}
+                    class="hidden px-6 py-4 bg-church-gray/5"
+                  >
+                    <p class="text-church-black/80">{duvida.resposta}</p>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Agendamento -->
+    <section class="py-16 bg-church-green/10">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-church-black mb-8">
+          Agende um atendimento
+        </h2>
+        <p class="text-lg text-church-black/80 max-w-3xl mx-auto mb-10">
+          Se você está passando por um momento difícil e necessita de apoio
+          espiritual, entre em contato conosco para agendar um atendimento.
+        </p>
+
+        <div>
+          <Button client:load variant="primary" type="submit"
+            ><a href="/cadastro">Solicitar atendimento</a></Button
+          >
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<!-- Versículo -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4 max-w-3xl text-center">
+    <div class="bg-church-green/5 p-8 rounded-xl">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-12 h-12 mx-auto text-church-green/60 mb-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
+        ></path>
+      </svg>
+      <p class="text-xl text-church-black/90 italic mb-4">
+        "Ele mesmo levou em seu corpo os nossos pecados sobre o madeiro, a fim
+        de que morrêssemos para os pecados e vivêssemos para a justiça; por suas
+        feridas vocês foram curados."
+      </p>
+      <p class="text-church-black font-medium">1 Pedro 2:24</p>
+    </div>
+  </div>
+</section>
+
+<Footer />
+
+<script>
+  // Script para controlar o acordeão
+  document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll("button[onclick]");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const icon = button.querySelector("svg");
+        if (icon) {
+          icon.classList.toggle("rotate-180");
+        }
+      });
+    });
+  });
+</script>

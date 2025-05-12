@@ -1,0 +1,309 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import bezerraImg from "../assets/bezerra.jpg";
+import jesusImg from "../assets/jesus.jpg";
+---
+
+<Layout title="Sobre - CEABEM">
+  <Navbar />
+
+  <main>
+    <!-- Seção Hero com título da página -->
+    <section class="py-16 bg-church-green/10">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-church-black mb-6">
+            Sobre Nós
+          </h1>
+          <p class="text-xl text-church-black/80 max-w-3xl mx-auto">
+            Conheça mais sobre a história e os valores do CEABEM
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de História -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 class="text-3xl font-bold text-church-black mb-6">
+              Nossa História
+            </h2>
+            <p class="text-church-black mb-4">
+              Centro Espírita Adolfo Bezerra de Menezes – Natal/RN O CEABEM foi
+              fundado em 29 de Agosto de 1949 pelo irmão João Cecílio da Costa e
+              um grupo de espíritas, sob a orientação do mentor espiritual
+              Adolfo Bezerra de Menezes para num futuro próximo trabalhar com
+              curas espirituais. Inicialmente o Centro funcionou numa casa na
+              Rua Mário Negócio, esquina com a então Avenida 04. Dois anos
+              depois foi transferido para a Rua dos Tororós, 382 – bairro do
+              Alecrim, Natal-RN, onde permanece até hoje.
+            </p>
+            <p class="text-church-black mb-4">
+              O Centro, conforme registro do Estatuto no 2º Ofício de Notas,
+              somente em 1951 elegeu a primeira diretoria, desenvolvendo, assim,
+              estudos Mediúnicos e doutrinários, além da assistência aos
+              necessitados, com estudos do Evangelho, terapêutica com passes e
+              água fluidificada. Em 1956, o Irmão Bezerra de Menezes, com uma
+              equipe espiritual, através do médium João Cecílio da Costa,
+              iniciou a assistência médico-espiritual realizando cirurgias e
+              orientando procedimentos, conforme as necessidades de cada
+              paciente e a natureza de suas aflições. O CEABEM passou por várias
+              reformas e ampliações e hoje funciona em dois pavimentos. Realiza
+              mais de 10 mil atendimentos mês, com assistência médico-
+              espiritual, através da fluidoterapia e da evangelhoterapia, água
+              fluidificada e passes, tratamentos e visitas espirituais à
+              distância. A Instituição conta com 80 médiuns que trabalham com 83
+              médicos espirituais e mais de duas centenas de voluntários, que
+              auxiliam tanto os trabalhos nas cabines, como na recepção, nos
+              tratamentos de passes, na direção da mesa e exposições do
+              Evangelho.
+            </p>
+            <p class="text-church-black">
+              Mais de 400 pessoas, entre crianças, adolescentes e adultos,
+              estudam a doutrina, desde a evangelização infanto-juvenil,
+              passando por todos os módulos do Estudo Sistematizado da Doutrina
+              Espírita (ESDE) e Educação da Mediunidade. Ao longo dos seus 65
+              anos, o Centro procurou desenvolver um trabalho voltado aos
+              necessitados. Inicialmente em uma linha de cunho assistencial, com
+              a distribuição de sopas e enxovais. Gradativamente essas ações
+              foram redirecionadas na perspectiva de contribuir para o resgate
+              da cidadania e inclusão social dos assistidos. Esse trabalho é
+              coordenado pelo Departamento sóciocultural que tem por finalidade
+              planejar, ordenar, executar e avaliar ações voltadas para atender
+              cidadãos e grupos sociais em diversas faixas etárias. Hoje, o
+              Bezerra de Menezes direciona essas ações para a comunidade de
+              Leningrado, na região leste da cidade. Tem buscado parceiras com
+              órgãos públicos e privados. Participa do Programa Cidadão Nota 10
+              da Secretaria de Tributação do Governo do Estado e mantém convênio
+              com a 2ª vara da Justiça Federal do Rio Grande do Norte. No
+              trabalho de divulgação da doutrina o Bezerra de Menezes conta com
+              uma Livraria que funciona em sua sede social, de terça-feira à
+              domingo, nos horários de 07:00 às 11:00, das 14:00 ás 17:00 e das
+              19:00 as 21:00 horas (quartas e sextas feiras), além de participar
+              de Feiras de Livros e outros eventos.
+            </p>
+          </div>
+          <div class="flex justify-center">
+            <div
+              class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg border-4 border-church-green"
+            >
+              <img
+                src={bezerraImg.src}
+                alt="Bezerra de Menezes"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Valores -->
+    <section class="py-16 bg-church-gray/10">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-church-black mb-12 text-center">
+          Nossos Valores
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div
+              class="bg-church-green/20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-8 h-8 text-church-black"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-church-black mb-3 text-center">
+              Amor
+            </h3>
+            <p class="text-church-black text-center">
+              Amai teu próximo como ati mesmo.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div
+              class="bg-church-green/20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-8 h-8 text-church-black"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-church-black mb-3 text-center">
+              Justiça
+            </h3>
+            <p class="text-church-black text-center">
+              Buscamos ser justos em todas as nossas ações, tratando todos com
+              igualdade e respeito às diferenças.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div
+              class="bg-church-green/20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-8 h-8 text-church-black"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-church-black mb-3 text-center">
+              Conhecimento
+            </h3>
+            <p class="text-church-black text-center">
+              Valorizamos o estudo contínuo da doutrina espírita e o
+              compartilhamento de sabedoria.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção da Equipe -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-church-black mb-12 text-center">
+          Nosso fundador João Cecílio da Costa
+        </h2>
+        <p>
+          João Cecílio da Costa nasceu em Natal/RN no dia 22 de novembro de
+          1912, sendo filho de Teófilo Tibúrcio da Costa e Maria Esmeraldina da
+          Costa. Filho de família humilde, não teve oportunidade de frequentar
+          escolas, foi apenas alfabetizado e aprendeu as quatro operações
+          fundamentais. Durante a sua infância e adolescência teve vários
+          problemas de saúde, sendo examinado por alguns médicos que nada o
+          diagnosticaram. Diante da persistência desses problemas, procurou
+          buscar na religião a sua cura. Inicialmente tornou-se evangélico e,
+          posteriormente, buscou a casa espírita quando após se submeter a um
+          tratamento foi orientado a desenvolver suas atividades espirituais,
+          engajando-se em um Centro Espírita situado no bairro das Quintas,
+          Natal/RN, onde permaneceu por um período de 18 (dezoito) anos. Em
+          1948, quando participava de um evangelho no lar foi orientado pelo
+          irmão Adolfo Bezerra de Menezes, a aprofundar-se nos estudos das obras
+          de Allan Kardec e, fundar um centro espírita para realizar um trabalho
+          de curas espirituais.<br /> Em 29 de agosto de 1949, João Cecílio com um
+          grupo de amigos fundou o Centro Espírita Adolfo Bezerra de Menezes. Inicialmente
+          os trabalhos eram voltados ao tratamento através do evangelho e do passe.
+          Somente em 1956, mediante as orientações do Irmão Bezerra de Menezes ao
+          médium João Cecílio, foram iniciados os trabalhos de curas espirituais
+          por meio da evangelhoterapia e fluidoterapia com uma equipe de médicos
+          espirituais.<br /> O trabalho espiritual de João Cecílio da Costa não ficou
+          apenas no bairro do Alecrim em Natal, pois ele foi o responsável pela implantação
+          de campos de curas espirituais em algumas cidades do Rio Grande do Norte,
+          como: Jucurutu, São Rafael, Lajes Pintadas, Luís Gomes e também em algumas
+          cidades dos estados do Ceará, Pernambuco e Paraíba. <br />João Cecílio
+          da Costa desencarnou em 20 de fevereiro de 2004 na cidade de Natal,
+          aos 92 anos de idade.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-3">
+          <!-- Pastor/Líder 1 -->
+          <a
+            href="https://pt.wikipedia.org/wiki/Bezerra_de_Menezes"
+            target="_blank"
+            class="no-underline"
+          >
+            <div
+              class="bg-church-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center"
+            >
+              <div
+                class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-church-green"
+              >
+                <div
+                  class="w-full h-full bg-church-gray/20 flex items-center justify-center"
+                >
+                  <img
+                    src={bezerraImg.src}
+                    alt="Bezerra de Menezes"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-church-black">
+                Bezerra de Menezes
+              </h3>
+              <p class="text-church-gray mb-2">Nosso Mentor</p>
+              <p class="text-church-black text-sm">
+                Liderando nossa casa há mais de 70 anos com sabedoria e amor.
+              </p>
+              <p class="text-church-black text-sm">
+                Clique aqui e saiba mais sobre sua história
+              </p>
+            </div>
+          </a>
+
+          <!-- Pastor/Líder 2 -->
+          <div
+            class="bg-church-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center"
+          >
+            <div
+              class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-2 border-church-green"
+            >
+              <div
+                class="w-full h-full bg-church-gray/20 flex items-center justify-center"
+              >
+                <img
+                  src={jesusImg.src}
+                  alt="Jesus"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-church-black">Jesus</h3>
+            <p class="text-church-gray mb-2">Nosso Mestre</p>
+            <p class="text-church-black text-sm">
+              Nosso Mestre, nosso guia, nosso amigo.
+            </p>
+          </div>
+
+          <!-- Pastor/Líder 3 -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

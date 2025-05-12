@@ -1,0 +1,254 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Button from "../components/ui/Button";
+
+// Array de eventos em destaque
+const eventosDestaque = [
+  {
+    dia: "18",
+    mes: "Maio",
+    ano: "2025",
+    hora: "08:00",
+    titulo: "Cafelma",
+    local: "Dix-Sept-Rosado",
+    descricao: "Arrecadação de alimentos para a Cafelma"
+  },
+  {
+    dia: "08",
+    mes: "Junho",
+    ano: "2025",
+    hora: "08:00",
+    titulo: "Cafelma",
+    local: "Bairro das Quintas",
+    descricao: "Arrecadação de alimentos para a Cafelma"
+  },
+  {
+    dia: "13",
+    mes: "Julho",
+    ano: "2025",
+    hora: "8:00",
+    titulo: "Cafelma",
+    local: "Bairro das Quintas ",
+    descricao: "Arrecadação de alimentos para a Cafelma"
+  },
+  {
+    dia: "17",
+    mes: "Agosto",
+    ano: "2025",
+    hora: "8:00",
+    titulo: "Cafelma",
+    local: "Barro Vermelho",
+    descricao: "Arrecadação de alimentos para a Cafelma"
+  },
+  {
+    dia: "14",
+    mes: "Setembro",
+    ano: "2025",
+    hora: "8:00",
+    titulo: "Cafelma",
+    local: "Bairro do Alecrim",
+    descricao: "Arrecadação de alimentos para a Cafelma"
+  },
+  {
+    dia: "19",
+    mes: "Outubro",
+    ano: "2025",
+    hora: "8:00",
+    titulo: "Cafelma",
+    local: "Neópolis ",
+    descricao: "Arrecadação de alimentos para a Cafelma"
+  },
+  {
+    dia: "09",
+    mes: "Novembro",
+    ano: "2025",
+    hora: "8:00",
+    titulo: "Cafelma",
+    local: "Neópolis ",
+    descricao: "Arrecadação de alimentos para a Cafelma"
+  },
+  {
+    dia: "14",
+    mes: "Dezembro",
+    ano: "2025",
+    hora: "8:00",
+    titulo: "Cafelma",
+    local: "Neópolis ",
+    descricao: "Arrecadação de alimentos para a Cafelma"
+  },
+
+];
+
+// Array de eventos regulares
+const eventosRegulares = [
+  {
+    icone: `<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>`,
+    titulo: "Estudo Bíblico",
+    horario: "Toda terça-feira às 19:30",
+    descricao: "Momento de aprofundamento no estudo das escrituras com nossos professores."
+  },
+  {
+    icone: `<path stroke-linecap="round" stroke-linejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z"></path>`,
+    titulo: "Ensaio do Coral",
+    horario: "Todo sábado às 16:00",
+    descricao: "Ensaio do nosso coral para as apresentações nos cultos de domingo."
+  },
+  {
+    icone: `<path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z"></path>`,
+    titulo: "Grupo de Oração",
+    horario: "Toda quinta-feira às 20:00",
+    descricao: "Momento dedicado à oração e intercessão por nossa comunidade e pelo mundo."
+  },
+  {
+    icone: `<path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"></path>`,
+    titulo: "Encontro de Casais",
+    horario: "Primeiro sábado do mês às 19:00",
+    descricao: "Evento dedicado ao fortalecimento dos relacionamentos conjugais."
+  },
+  {
+    icone: `<path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"></path>`,
+    titulo: "Ação Social",
+    horario: "Terceiro sábado do mês às 08:00",
+    descricao: "Trabalho voluntário em comunidades carentes da região."
+  },
+  {
+    icone: `<path stroke-linecap="round" stroke-linejoin="round" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.87c1.355 0 2.697.055 4.024.165C17.155 8.51 18 9.473 18 10.608v2.513m-3-4.87v-1.5m-6 1.5v-1.5m12 9.75l-1.5.75a3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0L3 16.5m15-3.38a48.474 48.474 0 00-6-.37c-2.032 0-4.034.125-6 .37m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.17c0 .62-.504 1.124-1.125 1.124H4.125A1.125 1.125 0 013 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 016 13.12M12.265 3.11a.375.375 0 11-.53 0L12 2.845l.265.265zm-3 0a.375.375 0 11-.53 0L9 2.845l.265.265zm6 0a.375.375 0 11-.53 0L15 2.845l.265.265z"></path>`,
+    titulo: "Escola Dominical",
+    horario: "Todos os domingos às 09:00",
+    descricao: "Aulas bíblicas para todas as idades antes do culto principal."
+  }
+];
+---
+
+<Layout title="Eventos - CEABEM">
+  <Navbar />
+
+  <main>
+    <!-- Seção Hero com título da página -->
+    <section class="py-16 bg-church-green/10">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-church-black mb-6">
+            Nossos Eventos
+          </h1>
+          <p class="text-xl text-church-black/80 max-w-3xl mx-auto">
+            Confira os próximos eventos e atividades
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Próximos Eventos -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-church-black mb-12 text-center">
+          Eventos em Destaque
+        </h2>
+
+        {
+          eventosDestaque.map((evento) => (
+            <div
+              class="bg-church-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-shadow mb-8 border border-church-green/20"
+            >
+              <div class="flex flex-col md:flex-row gap-6">
+                <div class="md:w-1/4 flex justify-center">
+                  <!-- Data do Evento -->
+                  <div
+                    class="bg-church-green/20 rounded-xl p-3 text-center w-40 h-40 flex flex-col justify-center"
+                  >
+                    <span class="text-5xl font-bold text-church-black">{evento.dia}</span>
+                    <span class="text-xl text-church-black">{evento.mes}</span>
+                    <span class="text-church-black/70">{evento.ano}</span>
+                    <span
+                      class="mt-2 text-sm bg-church-green text-church-black/90 px-3 py-1 rounded-full"
+                      >{evento.hora}</span
+                    >
+                  </div>
+                </div>
+
+                <div class="md:w-3/4">
+                  <h3 class="text-2xl font-bold text-church-black mb-2">
+                    {evento.titulo}
+                  </h3>
+                  <p class="text-church-black/70 mb-2">
+                    <span class="text-church-black">Local:</span> {evento.local}
+                  </p>
+                  <p class="text-church-black">
+                    {evento.descricao}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Calendário/Eventos Regulares -->
+    <section class="py-16 bg-church-gray/10">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-church-black mb-10 text-center">
+          Eventos Regulares
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {
+            eventosRegulares.map((evento) => (
+              <div class="bg-white p-5 rounded-xl shadow-sm">
+                <div class="flex items-center mb-4">
+                  <div class="bg-church-green/20 p-3 rounded-lg mr-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 text-church-black"
+                    >
+                      <Fragment set:html={evento.icone} />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-lg text-church-black">
+                      {evento.titulo}
+                    </h3>
+                    <p class="text-church-black/70">{evento.horario}</p>
+                  </div>
+                </div>
+                <p class="text-church-black">
+                  {evento.descricao}
+                </p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Inscrição Newsletter -->
+    <section class="py-16 bg-church-green/20">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-church-black mb-4">
+          Fique por dentro de todos os eventos
+        </h2>
+        <p class="text-church-black/80 max-w-2xl mx-auto mb-8">
+          Inscreva-se em nossa newsletter para receber atualizações sobre os
+          próximos eventos e atividades da igreja.
+        </p>
+
+        <div class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+          <input
+            type="email"
+            placeholder="Seu email"
+            class="flex-grow px-4 py-3 rounded-lg border border-church-gray/30 focus:outline-none focus:border-church-green"
+          />
+          <Button client:load variant="primary">Inscrever</Button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

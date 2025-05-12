@@ -1,0 +1,52 @@
+---
+import Button from "./ui/Button";
+import bezerraImg from "../assets/bezerra.jpg";
+---
+
+<section class="py-20 md:py-32 relative overflow-hidden bg-white">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+      <!-- Texto -->
+      <div class="md:w-1/2 text-center md:text-left">
+        <h1
+          class="text-4xl md:text-5xl lg:text-6xl font-bold text-church-black mb-6"
+        >
+          Bem vindos(as) ao CEABEM
+        </h1>
+        <p class="text-xl text-church-black mb-8">
+          Centro Espírita Adolfo Bezerra de Menezes, o CEABEM, é uma entidade
+          filantrópica de utilidade pública Municipal e Estadual, que atende a
+          uma média de 10 mil pessoas ao mês oferecendo tratamento médico
+          espiritual, ao mesmo tempo em que realiza atividades socioculturais
+          junto à comunidade.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/tratamento-espiritual" class="inline-block">
+            <Button client:load variant="primary" size="lg">
+              Tratamento Espiritual
+            </Button>
+          </a>
+          <a href="/sobre" class="inline-block">
+            <Button client:load variant="outline" size="lg">
+              Conheça Nosso Centro
+            </Button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Imagem -->
+      <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
+        <div
+          class="relative w-64 h-64 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden shadow-lg border-4 border-church-green"
+        >
+          <img
+            src={bezerraImg.src}
+            alt="Bezerra"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-church-green/5"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

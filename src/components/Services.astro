@@ -1,0 +1,118 @@
+---
+const services = [
+  {
+    day: "Segunda-feira",
+    time: " ",
+    consultas: "Consultas",
+    consultaDescription: "Fechado",
+    reuniao: "Reunião Pública e Passes",
+    reuniaoDescription: "Fechado",
+    livraria: "Livraria",
+    livrariaDescription: "08h às 11h - 13h às 17h ",
+  },
+  {
+    day: "Terças e Quintas",
+    time: " ",
+    consultas: "Consultas",
+    consultaDescription: "08h e 14h",
+    reuniao: "Reunião Pública e Passes",
+    reuniaoDescription: "08h e 14h",
+    livraria: "Livraria",
+    livrariaDescription: "08h às 11h - 13h às 17h ",
+  },
+  {
+    day: "Quartas",
+    time: " ",
+    consultas: "Consultas",
+    consultaDescription: "08h, 14h e 17h",
+    reuniao: "Reunião Pública e Passes",
+    reuniaoDescription: "08h, 14h e 18:30h",
+    livraria: "Livraria",
+    livrariaDescription: "08h às 11h - 13h às 17h ",
+  },
+  {
+    day: "Sexta-feira",
+    time: " ",
+    consultas: "Consultas",
+    consultaDescription: "14h",
+    reuniao: "Reunião Pública e Passes",
+    reuniaoDescription: "08h, 14h e 18:30h",
+    livraria: "Livraria",
+    livrariaDescription: "08h às 11h - 13h às 17h ",
+  },
+  {
+    day: "Sábado",
+    time: " ",
+    consultas: "Consultas",
+    consultaDescription: "14h",
+    reuniao: "Reunião Pública e Passes",
+    reuniaoDescription: "14h",
+    livraria: "Livraria",
+    livrariaDescription: "08h às 11h - 13h às 17h ",
+  },
+];
+---
+
+<section class="py-16 bg-church-gray/10">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-church-black mb-4">
+        Nossos Horários
+      </h2>
+      <p class="text-lg text-church-black max-w-2xl mx-auto">
+        Conheça nossos horários de atividades e venha participar conosco
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {
+        services.map((service) => (
+          <div class="bg-church-white p-6 rounded-xl border border-church-green/30 hover:border-church-green shadow-sm hover:shadow transition-all hover:transform hover:-translate-y-1">
+            <div class="flex items-center mb-4">
+              <div class="bg-church-green/20 p-3 rounded-lg mr-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6 text-church-black"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-xl text-church-black">
+                  {service.day}
+                </h3>
+                <p class="text-church-black">{service.time}</p>
+              </div>
+            </div>
+            <h4 class="text-xl font-semibold text-church-black mb-2">
+              {service.consultas}
+            </h4>
+            <p class="text-church-black">{service.consultaDescription}</p>
+            <h4 class="text-xl font-semibold text-church-black mb-2">
+              {service.reuniao}
+            </h4>
+            <p class="text-church-black">{service.reuniaoDescription}</p>
+            <h4 class="text-xl font-semibold text-church-black mb-2">
+              {service.livraria}
+            </h4>
+            <p class="text-church-black">{service.livrariaDescription}</p>
+          </div>
+        ))
+      }
+    </div>
+    <p class="text-church-black mt-4 text-center">
+      Atendimento é realizado por médicos espirituais e pelo tratamento por
+      passes incluindo fluidoterapia, evangelhoterapia e água fluidificada.<br
+      />
+      *OBS: Pedimos para chegar 15 minutos antes de toda e qualquer atividade.
+    </p>
+  </div>
+</section>

@@ -1,0 +1,101 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+
+const livros = [
+  {
+    slug: "o-livro-dos-espiritos",
+    titulo: "O Livro dos Espíritos",
+    autor: "Allan Kardec",
+    descricao:
+      "O primeiro livro da codificação espírita, contendo os princípios da Doutrina Espírita sobre a imortalidade da alma, a natureza dos espíritos e suas relações com os homens.",
+    imagem:
+      "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    preco: "R$ 45,00",
+  },
+  {
+    slug: "o-evangelho-segundo-o-espiritismo",
+    titulo: "O Evangelho Segundo o Espiritismo",
+    autor: "Allan Kardec",
+    descricao:
+      "Explicação das máximas morais do Cristo em concordância com o Espiritismo e suas aplicações às diversas circunstâncias da vida.",
+    imagem:
+      "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    preco: "R$ 42,00",
+  },
+  {
+    slug: "o-livro-dos-mediums",
+    titulo: "O Livro dos Médiuns",
+    autor: "Allan Kardec",
+    descricao:
+      "Guia dos médiuns e dos evocadores, contendo o ensino especial dos espíritos sobre a teoria de todos os gêneros de manifestações.",
+    imagem:
+      "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    preco: "R$ 40,00",
+  },
+];
+---
+
+<Layout title="Livraria - CEABEM">
+  <Navbar />
+
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-church-gray/10 py-16">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-church-black mb-4">
+            Livraria Espírita - João Cecílio da Costa
+          </h1>
+          <p class="text-lg text-church-black max-w-2xl mx-auto">
+            Encontre os principais livros da Doutrina Espírita e obras
+            complementares
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Livros Grid -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {
+            livros.map((livro) => (
+              <a href={`/livraria/${livro.slug}`} class="group">
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-all hover:transform hover:-translate-y-1 p-6">
+                  <div class="aspect-[3/4] mb-4 rounded-lg overflow-hidden">
+                    <img
+                      src={livro.imagem}
+                      alt={livro.titulo}
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 class="text-xl font-bold text-church-black mb-2 group-hover:text-church-green transition-colors">
+                    {livro.titulo}
+                  </h3>
+                  <p class="text-church-green font-medium mb-2">
+                    {livro.autor}
+                  </p>
+                  <p class="text-church-black/80 mb-4 line-clamp-3">
+                    {livro.descricao}
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <span class="text-xl font-bold text-church-black">
+                      {livro.preco}
+                    </span>
+                    <span class="text-church-green font-medium">
+                      Ver detalhes →
+                    </span>
+                  </div>
+                </div>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

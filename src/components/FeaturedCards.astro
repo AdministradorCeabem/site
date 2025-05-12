@@ -1,0 +1,66 @@
+---
+// Você pode substituir estes URLs por imagens reais do projeto
+const cards = [
+  {
+    title: "Nossa História",
+    description:
+      "Conheça a trajetória da CEABEM e sua importância para a comunidade espírita",
+    imageUrl:
+      "https://images.unsplash.com/photo-1532339142463-fd0a8979791a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    link: "/sobre",
+  },
+  {
+    title: "Atividades",
+    description:
+      "Participe de nossas palestras, passes espirituais e eventos de confraternização",
+    imageUrl:
+      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80",
+    link: "/eventos",
+  },
+  {
+    title: "Livraria",
+    description:
+      "Explore nossa livraria com os principais livros da Doutrina Espírita e obras complementares",
+    imageUrl:
+      "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+    link: "/livraria",
+  },
+];
+---
+
+<section class="py-16 bg-church-gray/10">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-church-black mb-4">
+        Conheça Mais
+      </h2>
+      <p class="text-lg text-church-black max-w-2xl mx-auto">
+        Descubra mais sobre nossa casa e como você pode participar
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {
+        cards.map((card) => (
+          <a
+            href={card.link}
+            class="group overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-all hover:transform hover:-translate-y-1 bg-white"
+          >
+            <div class="relative h-60 overflow-hidden">
+              <img
+                src={card.imageUrl}
+                alt={card.title}
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <h3 class="text-xl font-bold mb-1">{card.title}</h3>
+                <p class="text-white/80 text-sm">{card.description}</p>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>

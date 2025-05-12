@@ -1,0 +1,459 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import ContactForm from "../components/ContactForm";
+
+// Gerar nonce único para scripts
+const nonce = crypto.randomUUID();
+---
+
+<Layout title="Contato - CEABEM">
+  <Navbar />
+
+  <main>
+    <!-- Seção Hero com título da página -->
+    <section class="py-16 bg-church-green/10">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-church-black mb-6">
+            Entre em Contato
+          </h1>
+          <p class="text-xl text-church-black/80 max-w-3xl mx-auto">
+            Estamos aqui para atender você. Envie uma mensagem, ligue ou venha
+            nos visitar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Formulário e Informações -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Formulário de Contato -->
+          <div
+            class="bg-church-white p-8 rounded-xl shadow-sm border border-church-green/10"
+          >
+            <h2 class="text-2xl font-bold text-church-black mb-6">
+              Envie-nos uma mensagem
+            </h2>
+
+            <ContactForm client:load />
+          </div>
+
+          <!-- Informações de Contato -->
+          <div>
+            <h2 class="text-2xl font-bold text-church-black mb-6">
+              Informações de Contato
+            </h2>
+
+            <div class="space-y-8">
+              <div class="flex items-start">
+                <div class="bg-church-green/20 p-3 rounded-lg mr-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-church-black"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg text-church-black">Endereço</h3>
+                  <p class="text-church-black/80">Av. Principal, 1234</p>
+                  <p class="text-church-black/80">
+                    Bairro Centro, Sua Cidade - Estado
+                  </p>
+                  <p class="text-church-black/80">CEP: 12345-678</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="bg-church-green/20 p-3 rounded-lg mr-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-church-black"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg text-church-black">Telefone</h3>
+                  <p class="text-church-black/80">(00) 1234-5678</p>
+                  <p class="text-church-black/80">(00) 98765-4321 (WhatsApp)</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="bg-church-green/20 p-3 rounded-lg mr-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-church-black"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg text-church-black">E-mail</h3>
+                  <p class="text-church-black/80">contato@ceabem.org.br</p>
+                  <p class="text-church-black/80">secretaria@ceabem.org.br</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="bg-church-green/20 p-3 rounded-lg mr-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-church-black"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg text-church-black">Horários</h3>
+                  <p class="text-church-black/80">Segunda a Sexta: 8h às 18h</p>
+                  <p class="text-church-black/80">Sábado: 8h às 12h</p>
+                  <p class="text-church-black/80 mt-2 font-medium">Cultos:</p>
+                  <p class="text-church-black/80">Domingos: 9h e 18h</p>
+                  <p class="text-church-black/80">Quartas: 19h30</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mapa de Localização -->
+    <section class="py-16 bg-church-gray/10">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold text-church-black mb-8 text-center">
+          Nossa Localização
+        </h2>
+
+        <div class="w-full h-[400px] rounded-xl overflow-hidden shadow-sm">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.338649525786!2d-35.22234227959973!3d-5.807757842201931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997e6421843457%3A0xacdaa61678145736!2sCentro%20Esp%C3%ADrita%20Adolfo%20Bezerra%20de%20Menezes!5e0!3m2!1spt-BR!2sbr!4v1746637193678!5m2!1spt-BR!2sbr"
+            class="w-full h-full"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+            title="Localização do CEABEM"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Redes Sociais -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-2xl font-bold text-church-black mb-6">
+          Siga-nos nas Redes Sociais
+        </h2>
+        <p class="text-church-black/80 max-w-3xl mx-auto mb-8">
+          Acompanhe nossas atividades, receba mensagens inspiradoras e fique
+          atualizado sobre todos os eventos da igreja.
+        </p>
+
+        <div class="flex justify-center space-x-6">
+          <a
+            href="#"
+            class="bg-church-green/10 hover:bg-church-green/20 transition-colors p-4 rounded-full"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              class="text-church-black"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="bg-church-green/10 hover:bg-church-green/20 transition-colors p-4 rounded-full"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              class="text-church-black"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="bg-church-green/10 hover:bg-church-green/20 transition-colors p-4 rounded-full"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              class="text-church-black"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="bg-church-green/10 hover:bg-church-green/20 transition-colors p-4 rounded-full"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              class="text-church-black"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 bg-church-green/10">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold text-church-black mb-10 text-center">
+          Perguntas Frequentes
+        </h2>
+
+        <div class="max-w-3xl mx-auto space-y-6">
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <h3 class="font-bold text-lg text-church-black mb-3">
+              Como posso me tornar membro da igreja?
+            </h3>
+            <p class="text-church-black/80">
+              Para se tornar membro, você pode participar das nossas reuniões de
+              novos membros que acontecem todo primeiro domingo do mês após o
+              culto da manhã. Lá você receberá todas as informações necessárias.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <h3 class="font-bold text-lg text-church-black mb-3">
+              Quais são os horários dos cultos?
+            </h3>
+            <p class="text-church-black/80">
+              Nossos cultos principais acontecem aos domingos às 9h e 18h, e às
+              quartas-feiras às 19h30. Temos também reuniões de oração às
+              sextas-feiras às 20h.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <h3 class="font-bold text-lg text-church-black mb-3">
+              Vocês oferecem escola dominical para crianças?
+            </h3>
+            <p class="text-church-black/80">
+              Sim! Temos classes de escola dominical para todas as idades,
+              incluindo berçário, crianças, adolescentes e adultos. As aulas
+              acontecem aos domingos às 9h, simultaneamente ao culto matutino.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <h3 class="font-bold text-lg text-church-black mb-3">
+              Como posso solicitar uma visita pastoral?
+            </h3>
+            <p class="text-church-black/80">
+              Para solicitar uma visita pastoral, você pode entrar em contato
+              pelo telefone da secretaria, preencher o formulário de contato
+              nesta página ou falar diretamente com um de nossos pastores após
+              os cultos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<script nonce={nonce} is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contact-form");
+    const submitButton = document.getElementById("submit-button");
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const subjectInput = document.getElementById("subject");
+    const messageInput = document.getElementById("message");
+
+    // Função para mostrar erro
+    function showError(input, message) {
+      const errorDiv = document.createElement("div");
+      errorDiv.className = "text-red-500 text-sm mt-1";
+      errorDiv.textContent = message;
+      input.parentElement?.appendChild(errorDiv);
+      input.classList.add("border-red-500");
+    }
+
+    // Função para limpar erros
+    function clearErrors() {
+      form.querySelectorAll(".text-red-500").forEach((el) => el.remove());
+      [nameInput, emailInput, subjectInput, messageInput].forEach((input) => {
+        input.classList.remove("border-red-500");
+      });
+    }
+
+    // Validação em tempo real
+    emailInput.addEventListener("input", () => {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(emailInput.value)) {
+        showError(emailInput, "Email inválido");
+      } else {
+        emailInput.classList.remove("border-red-500");
+        emailInput.parentElement?.querySelector(".text-red-500")?.remove();
+      }
+    });
+
+    // Handler do formulário
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      console.log("Formulário submetido"); // Debug log
+
+      clearErrors();
+
+      // Validações
+      let hasError = false;
+
+      if (nameInput.value.length > 100) {
+        showError(nameInput, "Nome muito longo (máximo 100 caracteres)");
+        hasError = true;
+      }
+
+      if (subjectInput.value.length > 200) {
+        showError(subjectInput, "Assunto muito longo (máximo 200 caracteres)");
+        hasError = true;
+      }
+
+      if (messageInput.value.length > 2000) {
+        showError(
+          messageInput,
+          "Mensagem muito longa (máximo 2000 caracteres)"
+        );
+        hasError = true;
+      }
+
+      if (hasError) return;
+
+      const originalText = submitButton.textContent;
+      submitButton.textContent = "Enviando...";
+      submitButton.disabled = true;
+
+      try {
+        const formData = {
+          from_name: nameInput.value,
+          from_email: emailInput.value,
+          subject: subjectInput.value,
+          message: messageInput.value,
+        };
+
+        console.log("Enviando dados:", formData); // Debug log
+
+        const response = await fetch("/api/send-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        console.log("Resposta recebida:", response.status); // Debug log
+        console.log(
+          "Headers da resposta:",
+          Object.fromEntries(response.headers.entries())
+        ); // Debug log
+
+        const responseText = await response.text();
+        console.log("Texto da resposta:", responseText); // Debug log
+
+        let data;
+        try {
+          data = JSON.parse(responseText);
+          console.log("Dados da resposta:", data); // Debug log
+        } catch (parseError) {
+          console.error("Erro ao fazer parse da resposta:", parseError);
+          throw new Error("Erro ao processar resposta do servidor");
+        }
+
+        if (!response.ok) {
+          if (response.status === 429) {
+            const minutes = Math.ceil(data.remainingTime);
+            throw new Error(
+              `Limite de tentativas excedido. Tente novamente em ${minutes} minutos.`
+            );
+          }
+          throw new Error(data.message || "Erro ao enviar mensagem");
+        }
+
+        alert("Mensagem enviada com sucesso!");
+        form.reset();
+      } catch (error) {
+        console.error("Erro ao enviar mensagem:", error);
+        alert(
+          error.message ||
+            "Erro ao enviar mensagem. Por favor, tente novamente."
+        );
+      } finally {
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+      }
+    });
+  });
+</script>

@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import Services from "../components/Services.astro";
+import Verse from "../components/Verse.astro";
+import Footer from "../components/Footer.astro";
+import Doutrina from "../components/Doutrina.astro";
+import FeaturedCards from "../components/FeaturedCards.astro";
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout title="CEABEM">
+  <Navbar />
+  <Hero />
+  <Services />
+  <Verse
+    verse="Bem aventurados os pacificadores, porque eles serão chamados filhos de Deus. "
+    reference="Mateus 5:9"
+  />
+  <Doutrina />
+  <FeaturedCards />
+  <Footer />
+</Layout>
